@@ -1,0 +1,23 @@
+app = "toto-combinations-analyzer"
+primary_region = "fra"  # Choose a region close to you
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "10000"
+
+[processes]
+  app = "gunicorn app:app"
+
+[[services]]
+  internal_port = 10000
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = 443
