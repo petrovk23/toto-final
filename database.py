@@ -5,16 +5,7 @@ import pandas as pd
 from config import Config
 
 def get_db_connection(game_type='6_42'):
-    """
-    Opens a connection to the SQLite database located in /data/<db_name>.
-    By storing the .db file in /data, it will be written to the Fly volume
-    for persistent storage.
-    """
-    # In your config, 'db_name' might be something like 'toto_6_42_draws.db'
-    # We prepend '/data/' so it's stored on the Fly volume.
-    db_file = Config.GAMES[game_type]['db_name']  # e.g. "toto_6_42_draws.db"
-    db_path = "/data/" + db_file
-
+    db_path = Config.GAMES[game_type]['db_name']
     conn = sqlite3.connect(db_path, timeout=5)
     conn.row_factory = sqlite3.Row
     return conn
