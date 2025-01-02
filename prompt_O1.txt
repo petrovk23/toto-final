@@ -1440,8 +1440,7 @@ MarkupSafe==2.1.1
 
 <goals>
 
-This is my toto project. I deployed it to Render using the free tier but due to lower memory and cpu resources the program runs very slow and it is rendered useless. Offer other option for free deploying (compatible/suitable for my project) with much more computing resources. If there is not such an option. Guide me in details hoe to deploy it on my pc.
+This is the code base for my local toto project. I deployed it to Render but it runs very slow due to the scarce computer resources offered by the free tier. I want a free deploynment as I don't have money to allocate for it. The slow runtime makes the project useless. Suggest some other sites where to deploy it with way more resources available in a free tier. Or if there are no such sites, maybe I should deploy it locally on my pc?
 
 </goals>
-
 
